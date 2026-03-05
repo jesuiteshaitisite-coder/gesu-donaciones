@@ -1,0 +1,77 @@
+html<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GESU Hope Center - Donaciones</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f0f4f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+  .card { background: #1a3c2e; border-radius: 20px; padding: 40px 30px; max-width: 380px; width: 90%; text-align: center; }
+  h1 { color: white; font-size: 1.3rem; margin-bottom: 8px; }
+  p { color: #aad4b8; font-size: 0.85rem; margin-bottom: 24px; }
+  .dato { background: #f0f4f0; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+  .dato-texto { text-align: left; }
+  .dato-label { font-size: 0.72rem; color: #888; }
+  .dato-valor { font-size: 1rem; font-weight: bold; color: #1a3c2e; }
+  .copiar { background: #1a3c2e; color: white; border: none; border-radius: 8px; padding: 8px 14px; cursor: pointer; font-size: 0.8rem; }
+  .copiar:active { background: #e8732a; }
+  .footer { color: #aad4b8; font-size: 0.78rem; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>GESU Hope Center Corp</h1>
+  <p>Datos bancarios para donaciones</p>
+
+  <div class="dato">
+    <div class="dato-texto">
+      <div class="dato-label">Banco</div>
+      <div class="dato-valor">Wells Fargo</div>
+    </div>
+    <button class="copiar" onclick="copiar('Wells Fargo', this)">Copiar</button>
+  </div>
+
+  <div class="dato">
+    <div class="dato-texto">
+      <div class="dato-label">Nombre de cuenta</div>
+      <div class="dato-valor">Gesu Hope Center Corp</div>
+    </div>
+    <button class="copiar" onclick="copiar('Gesu Hope Center Corp', this)">Copiar</button>
+  </div>
+
+  <div class="dato">
+    <div class="dato-texto">
+      <div class="dato-label">Número de cuenta</div>
+      <div class="dato-valor">77463555556</div>
+    </div>
+    <button class="copiar" onclick="copiar('77463555556', this)">Copiar</button>
+  </div>
+
+  <div class="dato">
+    <div class="dato-texto">
+      <div class="dato-label">Routing Number</div>
+      <div class="dato-valor">063107513</div>
+    </div>
+    <button class="copiar" onclick="copiar('063107513', this)">Copiar</button>
+  </div>
+
+  <div class="dato">
+    <div class="dato-texto">
+      <div class="dato-label">Tipo de cuenta</div>
+      <div class="dato-valor">Checking</div>
+    </div>
+    <button class="copiar" onclick="copiar('Checking', this)">Copiar</button>
+  </div>
+
+  <div class="footer">Organización sin fines de lucro 🙏</div>
+</div>
+
+<script>
+  function copiar(texto, btn) {
+    navigator.clipboard.writeText(texto);
+    btn.textContent = '✓ Copiado';
+    setTimeout(() => btn.textContent = 'Copiar', 2000);
+  }
+</script>
+</body>
+</html>
